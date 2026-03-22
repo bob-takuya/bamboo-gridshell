@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bamboo Gridshell Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="./assets/index-XhDc5GZA.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DIVeenri.css">
+</head>
+<body>
+  <header>
+    <h1>Bamboo Gridshell Designer</h1>
+    <span>elastic gridshell · Chebyshev net · Cameo5 export</span>
+  </header>
+
+  <div class="app">
+    <aside class="sidebar">
+      <div class="param-group">
+        <h2>Geometry</h2>
+
+        <div class="param-row">
+          <label>Width <span class="val" id="width-val">60cm</span></label>
+          <input type="range" id="width" min="20" max="200" value="60" step="5">
+        </div>
+
+        <div class="param-row">
+          <label>Depth <span class="val" id="depth-val">60cm</span></label>
+          <input type="range" id="depth" min="20" max="200" value="60" step="5">
+        </div>
+
+        <div class="param-row">
+          <label>Rise <span class="val" id="rise-val">20cm</span></label>
+          <input type="range" id="rise" min="2" max="80" value="20" step="2">
+        </div>
+
+        <div class="param-row">
+          <label>Grid Pitch <span class="val" id="pitch-val">10cm</span></label>
+          <input type="range" id="pitch" min="4" max="30" value="10" step="2">
+        </div>
+      </div>
+
+      <div class="param-group">
+        <h2>Surface</h2>
+        <div class="param-row">
+          <select id="surface">
+            <option value="paraboloid">Elliptic Paraboloid</option>
+            <option value="barrel">Barrel Vault</option>
+            <option value="dome">Dome (Hemisphere)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="param-group">
+        <h2>Export</h2>
+        <button id="export-btn">⬇ Export SVG (Cameo5)</button>
+      </div>
+
+      <div class="param-group" style="margin-top:auto; padding-top:16px; border-top:1px solid var(--border)">
+        <p style="color:var(--text-dim); font-size:10px; line-height:1.6;">
+          <span style="color:var(--accent)">■</span> Family A &nbsp;
+          <span style="color:#60a5fa">■</span> Family B<br>
+          SVG: 1px = 1mm. Circle marks = node cut positions.
+        </p>
+      </div>
+    </aside>
+
+    <div class="main">
+      <div class="canvas-wrap">
+        <canvas id="canvas"></canvas>
+      </div>
+      <div class="bom" id="bom">
+        <!-- Bill of Materials rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
